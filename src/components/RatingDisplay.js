@@ -14,23 +14,23 @@ const RatingDisplay = (props) => {
   console.log(!selectedRate);
   let theme1, theme2, theme3, theme4, theme5;
   theme1 =
-    selectedRate == 1
+    +selectedRate === 1
       ? "bg-lightgray text-white"
       : "bg-ballGray text-letterWhite";
   theme2 =
-    selectedRate == 2
+    +selectedRate === 2
       ? "bg-lightgray text-white"
       : "bg-ballGray text-letterWhite";
   theme3 =
-    selectedRate == 3
+    +selectedRate === 3
       ? "bg-lightgray text-white"
       : "bg-ballGray text-letterWhite";
   theme4 =
-    selectedRate == 4
+    +selectedRate === 4
       ? "bg-lightgray text-white"
       : "bg-ballGray text-letterWhite";
   theme5 =
-    selectedRate == 5
+    +selectedRate === 5
       ? "bg-lightgray text-white"
       : "bg-ballGray text-letterWhite";
 
