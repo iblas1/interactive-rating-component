@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { useState } from "react";
+import RatingDisplay from "./components/RatingDisplay";
+import ThankYou from "./components/ThankYou";
 function App() {
+  const [selectedRate, setSelectedRate] = useState("");
+  const getRate = (data) => {
+    setSelectedRate(data);
+  };
+  console.log("rate=>", selectedRate);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="flex justify-center items-center h-[100vh] text-white bg-brightDark">
+      {selectedRate ? (
+        <ThankYou rating={selectedRate} />
+      ) : (
+        <RatingDisplay onSelectingRate={getRate} />
+      )}
     </div>
   );
 }
