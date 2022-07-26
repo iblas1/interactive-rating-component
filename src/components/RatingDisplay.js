@@ -10,6 +10,29 @@ const RatingDisplay = (props) => {
   const handleSubmit = () => {
     props.onSelectingRate(selectedRate);
   };
+  console.log(typeof selectedRate);
+  console.log(!selectedRate);
+  let theme1, theme2, theme3, theme4, theme5;
+  theme1 =
+    selectedRate == 1
+      ? "bg-lightgray text-white"
+      : "bg-ballGray text-letterWhite";
+  theme2 =
+    selectedRate == 2
+      ? "bg-lightgray text-white"
+      : "bg-ballGray text-letterWhite";
+  theme3 =
+    selectedRate == 3
+      ? "bg-lightgray text-white"
+      : "bg-ballGray text-letterWhite";
+  theme4 =
+    selectedRate == 4
+      ? "bg-lightgray text-white"
+      : "bg-ballGray text-letterWhite";
+  theme5 =
+    selectedRate == 5
+      ? "bg-lightgray text-white"
+      : "bg-ballGray text-letterWhite";
 
   return (
     <>
@@ -34,35 +57,50 @@ const RatingDisplay = (props) => {
           <div
             onClick={handleClick}
             id={1}
-            className="w-12 h-12 rounded-[50%] p-3 text-center bg-ballGray text-letterWhite hover:cursor-pointer hover:bg-orange md:text-xl"
+            className={
+              theme1 +
+              " w-12 h-12 rounded-[50%] p-3 text-center hover:cursor-pointer hover:bg-orange md:text-xl"
+            }
           >
             1
           </div>
           <div
             onClick={handleClick}
             id={2}
-            className="w-12 h-12 rounded-[50%] p-3 text-center bg-ballGray text-letterWhite hover:cursor-pointer hover:bg-orange md:text-xl"
+            className={
+              theme2 +
+              " w-12 h-12 rounded-[50%] p-3 text-center hover:cursor-pointer hover:bg-orange md:text-xl"
+            }
           >
             2
           </div>
           <div
             onClick={handleClick}
             id={3}
-            className="w-12 h-12 rounded-[50%] p-3 text-center bg-ballGray text-letterWhite hover:cursor-pointer hover:bg-orange md:text-xl"
+            className={
+              theme3 +
+              " w-12 h-12 rounded-[50%] p-3 text-center hover:cursor-pointer hover:bg-orange md:text-xl"
+            }
           >
             3
           </div>
           <div
             onClick={handleClick}
             id={4}
-            className="w-12 h-12 rounded-[50%] p-3 text-center bg-ballGray text-letterWhite hover:cursor-pointer hover:bg-orange md:text-xl"
+            className={
+              theme4 +
+              " w-12 h-12 rounded-[50%] p-3 text-center hover:cursor-pointer hover:bg-orange md:text-xl"
+            }
           >
             4
           </div>
           <div
             onClick={handleClick}
             id={5}
-            className="w-12 h-12 rounded-[50%] p-3 text-center bg-ballGray text-letterWhite hover:cursor-pointer hover:bg-orange md:text-xl"
+            className={
+              theme5 +
+              " w-12 h-12 rounded-[50%] p-3 text-center hover:cursor-pointer hover:bg-orange md:text-xl"
+            }
           >
             5
           </div>

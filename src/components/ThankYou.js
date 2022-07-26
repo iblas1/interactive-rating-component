@@ -1,7 +1,7 @@
 import thankYou from "../images/illustration-thank-you.svg";
 const ThankYou = (props) => {
   return (
-    <div className="p-5 w-[20rem] h-[25rem] rounded-[20px] bg-gray md:w-[25rem] text-center">
+    <div className="rateCard p-5 w-[20rem] h-[25rem] rounded-[20px] bg-gray md:w-[25rem] text-center">
       <div className="mt-6 md:mt-4">
         <img src={thankYou} alt="thank-you" className="mx-auto w-[40%]" />
       </div>
